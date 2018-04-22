@@ -147,7 +147,7 @@
       	
         
       }
-      public void resetBall(Ball ball, Boolean start)
+      public void resetBall(Ball ball, boolean start)
       {
          if(start)
          {
