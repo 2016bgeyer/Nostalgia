@@ -1,4 +1,4 @@
-//Name:Ben Geyer              Date:
+
    import java.awt.*;
    public class Ball extends Polkadot
    {

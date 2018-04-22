@@ -1,4 +1,4 @@
-	// Torbert, 7.20.06
+
    import javax.swing.*;
    import javax.swing.JFrame;
    public class DriverPong

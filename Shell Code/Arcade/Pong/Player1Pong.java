@@ -361,7 +361,7 @@
          
       }
       
-      //when the are up and down it won't tp into the ball
+      //when the are up and down it won't teleport into the ball
       public void bumpervert(Ball ball, Bumper bumper, Bumper bumper2, Timer i)
       {
          while(ball.getX() == bumper2.getX())
@@ -369,7 +369,7 @@
          
          while(ball.getX() == bumper.getX())
             i.stop();
-      }//works!!!!!!!!!
+      }
       
       public void ballX(Ball ball, Timer i)
       {
