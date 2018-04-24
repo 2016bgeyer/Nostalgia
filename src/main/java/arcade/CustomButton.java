@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.*;
 import javax.swing.JFrame;
 
-import arcade.BrickBreaker.*;
+import arcade.FinishedBrickBreaker.*;
 import arcade.ChallengeFriends;
 
 public class CustomButton extends JButton implements MouseListener{
@@ -110,7 +110,7 @@ public class CustomButton extends JButton implements MouseListener{
          frame.setSize(500, 500);
          frame.setLocation(300, 325);
          frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-         frame.setContentPane(new BrickPanel());
+         frame.setContentPane(new BrickPanel2());
          frame.setVisible(true);
       }
       else if(this.text.equals("Challenge Friends")){        

@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JSeparator;
-//import javax.swing.border.EmptyBorder;
 
 import java.awt.Color;
 import java.awt.GridBagConstraints;
@@ -20,13 +19,13 @@ public class ChallengeFriends implements ActionListener {
 
     JTextField email, phone, username, game, score;
 
-    //public ChallengeFriends() {}
-
     public void run() {
+        //Window frame
         JFrame frame = new JFrame("Challenge a Friend");
         frame.setSize(400, 275);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
+        //Inner panel for the window
         JPanel panel = new JPanel(new GridBagLayout());
         panel.setBackground(Color.black);
 
@@ -35,6 +34,7 @@ public class ChallengeFriends implements ActionListener {
         Insets inset = new Insets(4, 4, 4, 4);
         constraints.insets = inset;
 
+        //Create and add the labels
         JLabel usernameLabel = new JLabel("Your name: ");
         usernameLabel.setForeground(Color.green);
         constraints.weightx = 0.5;
@@ -72,6 +72,7 @@ public class ChallengeFriends implements ActionListener {
         constraints.gridy = 6;
         panel.add(phoneLabel, constraints);
         
+        //Create and add the text inputs 
         username = new JTextField();
         constraints.weightx = 0.5;
         constraints.gridx = 1;
@@ -102,6 +103,7 @@ public class ChallengeFriends implements ActionListener {
         constraints.gridy = 6;
         panel.add(phone, constraints);
         
+        //Create and add the buttons
         JButton emailButton = new JButton("Challenge via Email");
         constraints.weightx = 0.5;
         constraints.gridx = 1;
@@ -117,8 +119,6 @@ public class ChallengeFriends implements ActionListener {
         panel.add(phoneButton, constraints);
         phoneButton.setActionCommand("SendSMS");
         phoneButton.addActionListener(this);
-
-        //panel.setBorder(new EmptyBorder(1, 1, 1, 1));
 
         frame.add(panel);
         frame.setVisible(true);
