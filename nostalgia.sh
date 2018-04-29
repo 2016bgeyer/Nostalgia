@@ -17,6 +17,8 @@ if [ "$1" = "build" ]; then
 	mvn clean package
 elif [ "$1" = "run" ]; then
 	mvn exec:java -D exec.mainClass=nostalgia.ChallengeFriends
+elif [ "$1" = "test" ]; then
+	mvn test
 elif [ "$1" = "help" ] || [ "$1" = "" ]; then
 	echo ""
 	echo "Handles maven installation and commands"

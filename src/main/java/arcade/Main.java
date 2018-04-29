@@ -26,12 +26,27 @@ public class Main extends JFrame{
 
     
     //size of panel that opens up 
-    setSize(500,500);
+    setSize(500,750);
     setResizable(false); //can't change size once open
+
+    panel.setBackground(java.awt.Color.BLACK);
+    CustomButton astroids = new CustomButton("Astroids");
+    panel.add(astroids);
+    add(panel);
+
+    panel.setBackground(java.awt.Color.BLACK);
+    CustomButton battleship = new CustomButton("Battleship");
+    panel.add(battleship);
+    add(panel);
     
     panel.setBackground(java.awt.Color.BLACK);
     CustomButton brickBreaker = new CustomButton("BrickBreaker");
     panel.add(brickBreaker);
+    add(panel);
+
+    panel.setBackground(java.awt.Color.BLACK);
+    CustomButton pong = new CustomButton("Pong");
+    panel.add(pong);
     add(panel);
     
     //high score option 

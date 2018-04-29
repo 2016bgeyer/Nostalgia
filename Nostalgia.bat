@@ -16,6 +16,11 @@ if /i "%arg1%" == "build" (
     maven\bin\mvn clean package
 )
 
+if /i "%arg1%" == "test" (
+    echo "Testing..."
+    maven\bin\mvn test
+)
+
 ::TODO: Change command to whatever the main class ends up being. It's set to EmailSender right now since that's the only class that's here
 if /i "%arg1%" == "run" (
     echo "Running..."

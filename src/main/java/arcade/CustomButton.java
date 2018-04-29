@@ -11,6 +11,9 @@ import javax.swing.JFrame;
 
 import arcade.FinishedBrickBreaker.*;
 import arcade.ChallengeFriends;
+import arcade.Asteroids.AsteroidsGame;
+import arcade.Battleship.*;
+import arcade.Pong.*;
 
 public class CustomButton extends JButton implements MouseListener{
   Dimension size = new Dimension(250,100);
@@ -115,6 +118,32 @@ public class CustomButton extends JButton implements MouseListener{
       }
       else if(this.text.equals("Challenge Friends")){        
         new ChallengeFriends().run();
+      }
+      else if(this.text.equals("Battleship")){
+        JFrame frame = new JFrame("Battleship");
+        frame.setSize(400, 400);
+         frame.setLocation(300, 325);
+         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+         frame.setContentPane(new Battleship());
+         frame.setVisible(true);
+      }
+      else if(this.text.equals("Pong")){
+        int q = Integer.parseInt(JOptionPane.showInputDialog(
+          "How Hard?\n1. Easy\n2. Medium\n3. Hard\n4. Insane"));
+          JFrame frame = new JFrame("Pong");
+          frame.setSize(800, 800);
+           frame.setLocation(300, 325);
+           frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+           frame.setContentPane(new Player1Pong(q));
+           frame.setVisible(true);
+      }
+      else if(this.text.equals("Astroids")){
+          JFrame frame = new JFrame("Astroids");
+          frame.setSize(800, 800);
+           frame.setLocation(300, 325);
+           frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+           frame.setContentPane(new AsteroidsGame());
+           frame.setVisible(true);
       }
       /*else if(this.text.equals("High Score")){
         //help?
